@@ -1,4 +1,4 @@
-TU01: Lucky Bug (Theme for Tumblr)
+TU02: Card Tricks (Theme for Tumblr)
 ====
 
 Card Tricks is a theme with a very simple style, and its visual features are greatly hover-based. There are many customisable options, including different sizes of post, American/British dates, and others, which allow the user to easily adapt the theme to the appearance they want.
