@@ -1,0 +1,782 @@
+ <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+ 
+    <!--
+       
+        • #TU02 - Card Tricks •
+        • Version 1.3 •
+        • Created by Yonderesque (yonderesque.github.io | yonderesque.tumblr.com) •
+
+        To view the project's source code and license, please view the Github repository:
+        github.com/yonderesque/tu02
+
+        THIS PROJECT USES THE MIT LICENSE:
+        You MAY edit/build upon/etc. this theme in any way as long as you provide credit back to me.
+        You MAY use this code to create a project of your own as long as you provide credit back to me.
+        You may NOT steal this theme and claim it as your own.
+        You may NOT remove credit in any way. This includes the URL back to its Github repository as it
+        is there to provide access to the MIT license.
+
+        • Dates •
+        
+        Theme started: 11th October 2012
+        Theme first completed: 17th October 2012
+ 
+        -->
+       
+    <head>
+   
+        <meta name="color:Background" content="#ffffff">
+        <meta name="color:Blog Title" content="#bdaace">
+        <meta name="color:Blog Title Shadow" content="#734e94">
+        <meta name="color:Post Background" content="#f5f5f5">
+        <meta name="color:Post Title" content="#b078df">
+        <meta name="color:Post Title Shadow" content="#111">
+        <meta name="color:Post Text" content="#646464">
+        <meta name="color:Post Bold" content="#77608b">
+        <meta name="color:Post Italic" content="#77608b">
+        <meta name="color:Post Link" content="#6511b1">
+        <meta name="color:Post Link Hover" content="#000000">
+        <meta name="color:Question Background" content="#e9e9e9">
+        <meta name="color:Question Text" content="#646464">
+        <meta name="color:Asker Link" content="#6511b1">
+        <meta name="color:Asker Link Hover" content="#000000">
+        <meta name="color:Sidebar Background" content="#bdaace">
+        <meta name="color:Side Image Background" content="#bdaace">
+        <meta name="color:Sidebar Text" content="#77608b">
+        <meta name="color:Sidebar Bold" content="#754e97">
+        <meta name="color:Sidebar Italic" content="#754e97">
+        <meta name="color:Sidebar Link" content="#9038dd">
+        <meta name="color:Sidebar Link Hover" content="#ffffff">
+        <meta name="color:Page Arrow Text" content="#754e97">
+        <meta name="color:Page Arrow BG" content="#bdaace">
+        <meta name="color:Page Arrow Text Hover" content="#ffffff">
+        <meta name="color:Page Arrow BG Hover" content="#754e97">
+        <meta name="color:Main Link BG" content="#bdaace">
+        <meta name="color:Main Link Text" content="#77608b">
+        <meta name="color:Main Link BG Hover" content="#77608b">
+        <meta name="color:Main Link Text Hover" content="#ffffff">
+        <meta name="color:Custom Link BG" content="#bdaace">
+        <meta name="color:Custom Link Text" content="#77608b">
+        <meta name="color:Custom Link BG Hover" content="#77608b">
+        <meta name="color:Custom Link Text Hover" content="#ffffff">
+        <meta name="color:Stats Text" content="#444">
+        <meta name="color:Stats Text Hover" content="#6511b1">
+       
+        <meta name="if:American Dates" content="1">
+        <meta name="if:Show Blog Title" content="1">
+        <meta name="if:Title Drop Shadows" content="1">
+        <meta name="if:Show Captions" content="0">
+        <meta name="if:Bigger Posts" content="0">
+        <meta name="if:Infinite Scroll" content="0">
+       
+        <meta name="image:Background Image" content="http://static.tumblr.com/sxqkegs/iVVmc1v2w/strange_bullseyes.png">
+       
+        <meta name="text:Description Font Size" content="12">
+        <meta name="text:Post Title Font Size" content="22">
+        <meta name="text:Post Text Font Size" content="12">
+        <meta name="text:Custom Link 1 Name" content="">
+        <meta name="text:Custom Link 1 URL" content="">
+        <meta name="text:Custom Link 2 Name" content="">
+        <meta name="text:Custom Link 2 URL" content="">
+        <meta name="text:Custom Link 3 Name" content="">
+        <meta name="text:Custom Link 3 URL" content="">
+        <meta name="text:Custom Link 4 Name" content="">
+        <meta name="text:Custom Link 4 URL" content="">
+        <meta name="text:Custom Link 5 Name" content="">
+        <meta name="text:Custom Link 5 URL" content="">
+        <meta name="text:Custom Link 6 Name" content="">
+        <meta name="text:Custom Link 6 URL" content="">
+        <meta name="text:Custom Link 7 Name" content="">
+        <meta name="text:Custom Link 7 URL" content="">
+        <meta name="text:Custom Link 8 Name" content="">
+        <meta name="text:Custom Link 8 URL" content="">
+        <meta name="text:Custom Link 9 Name" content="">
+        <meta name="text:Custom Link 9 URL" content="">
+        <meta name="text:Custom Link 10 Name" content="">
+        <meta name="text:Custom Link 10 URL" content="">
+       
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+        <title>{Title}</title>
+        <meta name="description" content="{MetaDescription}" />
+       
+        <link rel="icon" href="{Favicon}" />
+        <link rel="alternate" type="application/rss+xml" href="{RSS}">
+        <style type='text/css'>
+       
+body{
+    background-color: {color:Background};
+    background-image: url('{image:Background Image}');
+    background-attachment: fixed;
+}
+ 
+#tumblr_controls {
+right: 1px !important;
+position: fixed !important;
+}
+ 
+#midwrap {
+    margin: 0 auto;
+    width: 800px;
+}
+ 
+#blogtitle {
+    font-family: georgia;
+    font-size: 50px;
+    text-align: center;
+    margin-bottom: 12px;
+    color: {color:Blog Title};
+    {block:IfTitleDropShadows}
+    text-shadow: 0px -2px {color:Blog Title Shadow};
+    {/block:IfTitleDropShadows}
+}
+ 
+#blogtitle a {
+    text-decoration: none;
+    color: {color:Blog Title};
+    {block:IfTitleDropShadows}
+    text-shadow: 0px -2px {color:Blog Title Shadow};
+    {/block:IfTitleDropShadows}
+}
+ 
+#side {
+    position: fixed;
+    margin-top: 90px;
+    {block:IfNotBiggerPosts}
+    margin-left: 50px;
+    {/block:IfNotBiggerPosts}
+}
+ 
+#side img {
+    background-color: {color:Side Image Background};
+    padding: 7px;
+    width: 85px;
+}
+ 
+#sidedesc {
+    width: 99px;
+    position: fixed;
+    margin-top: 90px;
+    {block:IfBiggerPosts}
+    margin-left: 700px;
+    {/block:IfBiggerPosts}
+    {block:IfNotBiggerPosts}
+    margin-left: 650px;
+    {/block:IfNotBiggerPosts}
+}
+ 
+#desc {
+    min-height: 85px;
+    background-color: {color:Sidebar Background};
+    color: {color:Sidebar Text};
+    font-family: georgia;
+    font-size: {text:Description Font Size}px;
+    padding: 7px;
+    text-align: center;
+}
+ 
+#desc b, strong {
+    color: {color:Sidebar Bold};
+}
+ 
+#desc i, em {
+    color: {color:Sidebar Italic};
+}
+ 
+#desc a {
+    text-decoration: none;
+    color: {color:Sidebar Link};
+    -webkit-transition: all 0.5s ease-in-out;
+    -moz-transition: all 0.5s ease-in-out;
+    -o-transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out;
+}
+ 
+#desc a:hover {
+    text-decoration: none;
+    color: {color:Sidebar Link Hover};
+    -webkit-transition: all 0.5s ease-in-out;
+    -moz-transition: all 0.5s ease-in-out;
+    -o-transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out;
+}
+ 
+.side1link {
+    position: relative;
+    bottom: -40px;
+    opacity: 0;
+    -webkit-transition: all 1s ease-in-out;
+    -moz-transition: all 1s ease-in-out;
+    -o-transition: all 1s ease-in-out;
+    transition: all 1s ease-in-out;
+}
+ 
+#side:hover .side1link {
+    opacity: 1;
+    bottom: 0px;
+    -webkit-transition: all 1s ease-in-out;
+    -moz-transition: all 1s ease-in-out;
+    -o-transition: all 1s ease-in-out;
+    transition: all 1s ease-in-out;
+}
+ 
+.side2link {
+    position: relative;
+    bottom: -40px;
+    opacity: 0;
+    -webkit-transition: all 1s ease-in-out;
+    -moz-transition: all 1s ease-in-out;
+    -o-transition: all 1s ease-in-out;
+    transition: all 1s ease-in-out;
+}
+ 
+#sidedesc:hover .side2link {
+    opacity: 1;
+    bottom: -4px;
+    -webkit-transition: all 1s ease-in-out;
+    -moz-transition: all 1s ease-in-out;
+    -o-transition: all 1s ease-in-out;
+    transition: all 1s ease-in-out;
+}
+ 
+.side1link a {
+    display: block;
+    margin-top: 3px;
+    font-size: 10px;
+    text-align: center;
+    font-family: georgia;
+    padding: 2px;
+    width: 95px;
+    background-color: {color:Main Link BG};
+    color: {color:Main Link Text};
+    text-decoration: none;
+    text-transform: uppercase;
+    -webkit-transition: all 0.5s ease-in-out;
+    -moz-transition: all 0.5s ease-in-out;
+    -o-transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out;
+}
+ 
+.side1link a:hover {
+    background-color: {color:Main Link BG Hover};
+    color: {color:Main Link Text Hover};
+    -webkit-transition: all 0.5s ease-in-out;
+    -moz-transition: all 0.5s ease-in-out;
+    -o-transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out;
+}
+ 
+.side2link a {
+    display: block;
+    margin-top: 3px;
+    font-size: 10px;
+    text-align: center;
+    font-family: georgia;
+    padding: 2px;
+    width: 95px;
+    background-color: {color:Custom Link BG};
+    color: {color:Custom Link Text};
+    text-decoration: none;
+    text-transform: uppercase;
+    -webkit-transition: all 0.5s ease-in-out;
+    -moz-transition: all 0.5s ease-in-out;
+    -o-transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out;
+}
+ 
+.side2link a:hover {
+    background-color: {color:Custom Link BG Hover};
+    color: {color:Custom Link Text Hover};
+    -webkit-transition: all 0.5s ease-in-out;
+    -moz-transition: all 0.5s ease-in-out;
+    -o-transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out;
+}
+ 
+#pagination {
+    padding-top: 15px;
+    text-align: center;
+}
+ 
+#pagination a {
+    text-decoration: none;
+    background-color: {color:Page Arrow BG};
+    color: {color:Page Arrow Text};
+    font-family: georgia;
+    font-size: 10px;
+    font-weight: bold;
+    padding: 5px;
+    border-radius: 20px;
+    -webkit-transition: all 0.5s ease-in-out;
+    -moz-transition: all 0.5s ease-in-out;
+    -o-transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out;
+}
+ 
+#pagination a:hover {
+    background-color: {color:Page Arrow BG Hover};
+    color: {color:Page Arrow Text Hover};
+    -webkit-transition: all 0.5s ease-in-out;
+    -moz-transition: all 0.5s ease-in-out;
+    -o-transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out;
+}
+ 
+#prevarrow {
+    position: fixed;
+    margin-top: 45px;
+    {block:IfBiggerPosts}
+    margin-left: 39px;
+    {/block:IfBiggerPosts}
+    {block:IfNotBiggerPosts}
+    margin-left: 89px;
+    {/block:IfNotBiggerPosts}
+}
+ 
+#nextarrow {
+    position: fixed;
+    margin-top: 45px;
+    {block:IfBiggerPosts}
+    margin-left: 739px;
+    {/block:IfBiggerPosts}
+    {block:IfNotBiggerPosts}
+    margin-left: 689px;
+    {/block:IfNotBiggerPosts}
+}
+ 
+.entries {
+    {block:IfBiggerPosts}
+    width: 520px;
+    {/block:IfBiggerPosts}
+    {block:IfNotBiggerPosts}
+    width: 420px;
+    {/block:IfNotBiggerPosts}
+    margin: 0 auto;
+    z-index: 999;
+}
+ 
+.entry {
+    color: {color:Post Text};
+    background-color: {color:Post Background};
+    padding: 10px;
+    font-family: georgia;
+    font-size: {text:Post Text Font Size}px;
+    margin-bottom: 10px;
+    -webkit-transition: all 0.5s ease-in-out;
+    -moz-transition: all 0.5s ease-in-out;
+    -o-transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out;
+}
+ 
+.entry:hover {
+    margin-bottom: 25px;
+    -webkit-transition: all 0.5s ease-in-out;
+    -moz-transition: all 0.5s ease-in-out;
+    -o-transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out;
+}
+ 
+.entry strong, b{
+    color: {color:Post Bold};
+}
+ 
+.entry em, i {
+    color: {color:Post Italic};
+}
+ 
+.entry a {
+    text-decoration: none;
+    color: {color:Post Link};
+    -webkit-transition: all 0.5s ease-in-out;
+    -moz-transition: all 0.5s ease-in-out;
+    -o-transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out;
+}
+ 
+.entry a:hover {
+    text-decoration: none;
+    color: {color:Post Link Hover};
+    -webkit-transition: all 0.5s ease-in-out;
+    -moz-transition: all 0.5s ease-in-out;
+    -o-transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out;
+}
+ 
+.entry blockquote {
+    border-left: 4px solid {color:Post Bold};
+    padding-left: 5px;
+}
+ 
+.entry img {
+    padding-bottom: 3px;
+}
+ 
+.posttitle {
+    font-family: georgia;
+    font-size: {text:Post Title Font Size}px;
+    color: {color:Post Title};
+    {block:IfTitleDropShadows}
+    text-shadow: 0px -1px {color:Post Title Shadow};
+    {/block:IfTitleDropShadows}
+}
+ 
+.posttitle a {
+    color: {color:Post Title};
+    text-decoration: underline;
+    -webkit-transition: all 0.5s ease-in-out;
+    -moz-transition: all 0.5s ease-in-out;
+    -o-transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out;
+}
+ 
+.posttitle a:hover {
+    color: {color:Post Link Hover};
+    text-decoration: underline;
+    -webkit-transition: all 0.5s ease-in-out;
+    -moz-transition: all 0.5s ease-in-out;
+    -o-transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out;
+}
+ 
+.postphoto {
+    text-align: center;
+}
+ 
+.hires {
+    text-align: left;
+    margin-top: -15px;
+}
+ 
+.quotesource {
+    text-align: right;
+    padding-top: 5px;
+}
+ 
+.albumart {
+    padding-bottom: 5px;
+}
+ 
+.albumart img {
+    {block:IfBiggerPosts}
+    width: 500px;
+    {/block:IfBiggerPosts}
+    {block:IfNotBiggerPosts}
+    width: 400px;
+    {/block:IfNotBiggerPosts}
+}
+ 
+.musicdetails {
+    padding-top: 3px;
+}
+ 
+.qborder {
+    position: relative;
+    background-color: {color:Question Background};
+    color: {color:Question Text};
+    padding: 10px 10px 50px 10px;
+}
+ 
+.qpic {
+    position: absolute;
+    bottom: -10px;
+    left: 10px;
+}
+ 
+.qname {
+    position: relative;
+    bottom: 29px;
+    left: 0;
+    opacity: 0;
+    -webkit-transition: all 0.5s ease-in-out;
+    -moz-transition: all 0.5s ease-in-out;
+    -o-transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out;
+}
+ 
+.qpic:hover .qname {
+    left: 36px;
+    opacity: 1;
+    -webkit-transition: all 0.5s ease-in-out;
+    -moz-transition: all 0.5s ease-in-out;
+    -o-transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out;
+}
+ 
+.entry:hover .stats {
+    opacity: 1;
+    margin-left: 0px;
+    margin-top: 16px;
+    -webkit-transition: all 0.5s ease-in-out;
+    -moz-transition: all 0.5s ease-in-out;
+    -o-transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out;
+}
+ 
+.stats {
+    opacity: 0;
+    -webkit-transition: all 0.5s ease-in-out;
+    -moz-transition: all 0.5s ease-in-out;
+    -o-transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out;
+    font-family: georgia;
+    font-size: 10px;
+    float: left;
+    margin-left: 100px;
+    margin-top: -10px;
+    color: {color:Stats Text};
+}
+ 
+.stats a {
+    color: {color:Stats Text};
+    text-decoration: none;
+    padding: 3px;
+    -webkit-transition: all 0.5s ease-in-out;
+    -moz-transition: all 0.5s ease-in-out;
+    -o-transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out;
+}
+ 
+.stats a:hover {
+    color: {color:Stats Text Hover};
+    text-decoration: none;
+    padding: 3px;
+    -webkit-transition: all 0.5s ease-in-out;
+    -moz-transition: all 0.5s ease-in-out;
+    -o-transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out;
+}
+ 
+.permastats {
+    font-family: georgia;
+    font-size: 10px;
+    text-align: center;
+    color: {color:Post Text};
+    background-color: {color:Post Background};
+    padding: 4px;
+}
+ 
+.permastats a {
+    color: {color:Post Link};
+    text-decoration: none;
+    -webkit-transition: all 0.5s ease-in-out;
+    -moz-transition: all 0.5s ease-in-out;
+    -o-transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out;
+}
+ 
+.permastats a:hover {
+    color: {color:Post Link Hover};
+    text-decoration: none;
+    -webkit-transition: all 0.5s ease-in-out;
+    -moz-transition: all 0.5s ease-in-out;
+    -o-transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out;
+}
+ 
+.permastats2 {
+    font-family: georgia;
+    font-size: 10px;
+    text-align: center;
+    margin-top: -7px;
+    color: {color:Post Text};
+    background-color: {color:Post Background};
+    padding: 4px;
+}
+ 
+.permastats2 a {
+    color: {color:Post Link};
+    text-decoration: none;
+    -webkit-transition: all 0.5s ease-in-out;
+    -moz-transition: all 0.5s ease-in-out;
+    -o-transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out;
+}
+ 
+.permastats2 a:hover {
+    color: {color:Post Link Hover};
+    text-decoration: none;
+    -webkit-transition: all 0.5s ease-in-out;
+    -moz-transition: all 0.5s ease-in-out;
+    -o-transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out;
+}
+ 
+.notes {
+    color: {color:Post Text};
+    background-color: {color:Post Background};
+    font-family: georgia;
+    font-size: 12px;
+    margin-top: 10px;
+    padding-left: 15px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-right: 5px;
+}
+ 
+.notes a {
+    color: {color:Post Link};
+    text-decoration: none;
+    -webkit-transition: all 0.5s ease-in-out;
+    -moz-transition: all 0.5s ease-in-out;
+    -o-transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out;
+}
+ 
+.notes a:hover {
+    color: {color:Post Link Hover};
+    text-decoration: none;
+    -webkit-transition: all 0.5s ease-in-out;
+    -moz-transition: all 0.5s ease-in-out;
+    -o-transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out;
+}
+ 
+{CustomCSS}
+ 
+        </style>
+        {block:IfInfiniteScroll}<script type="text/javascript" src="http://codysherman.com/tools/infinite-scrolling/code"></script>{/block:IfInfiniteScroll}
+    </head>
+    <body>
+             <div id="midwrap">
+                 {block:IfShowBlogTitle}<div id="blogtitle"><a href="/">{Title}</a></div>{/block:IfShowBlogTitle}
+                 <div id="side">
+                    <div id="sideimg"><a href="/" title="Refresh/Home"><img src="{PortraitURL-96}" width="50px" alt="Sidebar Image" /></a></div>
+                        <div class="side1link"><a href="/">home</a></div>
+                        <div class="side1link"><a href="/placeholder1">ask</a></div>
+                        <div class="side1link"><a href="/placeholder2">submit</a></div>
+                        <div class="side1link"><a href="/archive">archive</a></div>
+                        <div class="side1link"><a href="http://yonderesque.github.io">theme</a></div>
+            </div>
+           
+            <div id="sidedesc">
+                        <div id="desc">{Description}</div>
+                        {block:IfCustomLink1Name}<div class="side2link"><a href="{text:Custom Link 1 URL}">{text:Custom Link 1 Name}</a></div>{/block:IfCustomLink1Name}
+                        {block:IfCustomLink2Name}<div class="side2link"><a href="{text:Custom Link 2 URL}">{text:Custom Link 2 Name}</a></div>{/block:IfCustomLink2Name}
+                        {block:IfCustomLink3Name}<div class="side2link"><a href="{text:Custom Link 3 URL}">{text:Custom Link 3 Name}</a></div>{/block:IfCustomLink3Name}
+                        {block:IfCustomLink4Name}<div class="side2link"><a href="{text:Custom Link 4 URL}">{text:Custom Link 4 Name}</a></div>{/block:IfCustomLink4Name}
+                        {block:IfCustomLink5Name}<div class="side2link"><a href="{text:Custom Link 5 URL}">{text:Custom Link 5 Name}</a></div>{/block:IfCustomLink5Name}
+                        {block:IfCustomLink6Name}<div class="side2link"><a href="{text:Custom Link 6 URL}">{text:Custom Link 6 Name}</a></div>{/block:IfCustomLink6Name}
+                        {block:IfCustomLink7Name}<div class="side2link"><a href="{text:Custom Link 7 URL}">{text:Custom Link 7 Name}</a></div>{/block:IfCustomLink7Name}
+                        {block:IfCustomLink8Name}<div class="side2link"><a href="{text:Custom Link 8 URL}">{text:Custom Link 8 Name}</a></div>{/block:IfCustomLink8Name}
+                        {block:IfCustomLink9Name}<div class="side2link"><a href="{text:Custom Link 9 URL}">{text:Custom Link 9 Name}</a></div>{/block:IfCustomLink9Name}
+                        {block:IfCustomLink10Name}<div class="side2link"><a href="{text:Custom Link 10 URL}">{text:Custom Link 10 Name}</a></div>{/block:IfCustomLink10Name}
+            </div>
+           
+            {block:IfNotInfiniteScroll}
+                 <div id="pagination">
+                    {block:Pagination}
+                    {block:PreviousPage}<div id="prevarrow"><a href="{PreviousPage}">&#60;&#60;</a></div>{/block:PreviousPage}
+                    {block:NextPage}<div id="nextarrow"><a href="{NextPage}">&#62;&#62;</a></div>{/block:NextPage}
+                    {/block:Pagination}
+                 </div>
+            {/block:IfNotInfiniteScroll}
+                 
+                 <div class="entries">
+                 <div class="autopagerize_page_element">
+                 
+                    {block:Posts}
+                       
+                        <div class="entry">
+                       
+                        {block:Text}
+                                {block:Title}<div class="posttitle">{Title}</div>{/block:Title}
+                                {Body}
+                                <div class="stats">
+                                    {block:Date}<a href="{Permalink}">&uarr; {24HourWithZero}:{Minutes} // {block:IfAmericanDates}{MonthNumberWithZero}.{DayOfMonthWithZero}.{Year}{/block:IfAmericanDates}{block:IfNotAmericanDates}{DayOfMonthWithZero}.{MonthNumberWithZero}.{Year}{/block:IfNotAmericanDates}{/block:Date}{block:NoteCount} // {NoteCountWithLabel}{/block:NoteCount}</a>
+                                </div>
+                        {/block:Text}
+                       
+                        {block:Photo}
+                                <div class="postphoto">{LinkOpenTag}<img src="{block:IfBiggerPosts}{PhotoURL-500}{/block:IfBiggerPosts}{block:IfNotBiggerPosts}{PhotoURL-400}{/block:IfNotBiggerPosts}" alt="{PhotoAlt}" />{LinkCloseTag}</div>
+                                {block:HighRes}<div class="hires"><a href="{PhotoURL-HighRes}"><br />&#62;&#62; high resolution</a></div>{/block:HighRes}
+                                {block:IfShowCaptions}{block:Caption}{Caption}{/block:Caption}{/block:IfShowCaptions}
+                                <div class="stats">
+                                    {block:Date}<a href="{Permalink}">&uarr; {24HourWithZero}:{Minutes} // {block:IfAmericanDates}{MonthNumberWithZero}.{DayOfMonthWithZero}.{Year}{/block:IfAmericanDates}{block:IfNotAmericanDates}{DayOfMonthWithZero}.{MonthNumberWithZero}.{Year}{/block:IfNotAmericanDates}{/block:Date}{block:NoteCount} // {NoteCountWithLabel}{/block:NoteCount}</a>
+                                </div>
+                        {/block:Photo}
+                       
+                        {block:Photoset}
+                                {block:IfBiggerPosts}{Photoset-500}{/block:IfBiggerPosts}{block:IfNotBiggerPosts}{Photoset-400}{/block:IfNotBiggerPosts}
+                                {block:IfShowCaptions}{block:Caption}{Caption}{/block:Caption}{/block:IfShowCaptions}
+                                <div class="stats">
+                                    {block:Date}<a href="{Permalink}">&uarr; {24HourWithZero}:{Minutes} // {block:IfAmericanDates}{MonthNumberWithZero}.{DayOfMonthWithZero}.{Year}{/block:IfAmericanDates}{block:IfNotAmericanDates}{DayOfMonthWithZero}.{MonthNumberWithZero}.{Year}{/block:IfNotAmericanDates}{/block:Date}{block:NoteCount} // {NoteCountWithLabel}{/block:NoteCount}</a>
+                                </div>
+                        {/block:Photoset}
+                       
+                        {block:Quote}
+                                <div class="posttitle">{Quote}</div>
+                                {block:Source}<div class="quotesource">-- {Source}</div>{/block:Source}
+                                <div class="stats">
+                                    {block:Date}<a href="{Permalink}">&uarr; {24HourWithZero}:{Minutes} // {block:IfAmericanDates}{MonthNumberWithZero}.{DayOfMonthWithZero}.{Year}{/block:IfAmericanDates}{block:IfNotAmericanDates}{DayOfMonthWithZero}.{MonthNumberWithZero}.{Year}{/block:IfNotAmericanDates}{/block:Date}{block:NoteCount} // {NoteCountWithLabel}{/block:NoteCount}</a>
+                                </div>
+                        {/block:Quote}
+                       
+                        {block:Link}
+                                <div class="posttitle"><a href="{URL}">{Name}</a></div>
+                                {block:Description}{Description}{/block:Description}
+                                <div class="stats">
+                                    {block:Date}<a href="{Permalink}">&uarr; {24HourWithZero}:{Minutes} // {block:IfAmericanDates}{MonthNumberWithZero}.{DayOfMonthWithZero}.{Year}{/block:IfAmericanDates}{block:IfNotAmericanDates}{DayOfMonthWithZero}.{MonthNumberWithZero}.{Year}{/block:IfNotAmericanDates}{/block:Date}{block:NoteCount} // {NoteCountWithLabel}{/block:NoteCount}</a>
+                                </div>
+                        {/block:Link}
+                       
+                        {block:Chat}
+                                {block:Title}<div class="posttitle">{Title}</div>{/block:Title}
+                                {block:Lines}<div class="chatlines">
+                                {block:Label}<strong>{Label}</strong>{/block:Label}
+                                {Line}<br /></div>
+                                {/block:Lines}
+                                <div class="stats">
+                                    {block:Date}<a href="{Permalink}">&uarr; {24HourWithZero}:{Minutes} // {block:IfAmericanDates}{MonthNumberWithZero}.{DayOfMonthWithZero}.{Year}{/block:IfAmericanDates}{block:IfNotAmericanDates}{DayOfMonthWithZero}.{MonthNumberWithZero}.{Year}{/block:IfNotAmericanDates}{/block:Date}{block:NoteCount} // {NoteCountWithLabel}{/block:NoteCount}</a>
+                                </div>
+                        {/block:Chat}
+                       
+                        {block:Audio}
+                                {block:AlbumArt}<div class="albumart"><img src="{AlbumArtURL}" alt="{TrackName}"></div>{/block:AlbumArt}
+                                {AudioPlayerBlack}
+                                <div class="musicdetails">{block:TrackName}{TrackName}{/block:TrackName}{block:Artist} // {Artist}{/block:Artist}{block:Album} // {Album}{/block:Album}</div>
+                                {block:IfShowCaptions}{block:Caption}{Caption}{/block:Caption}{/block:IfShowCaptions}
+                                <div class="stats">
+                                    {block:Date}<a href="{Permalink}">&uarr; {24HourWithZero}:{Minutes} // {block:IfAmericanDates}{MonthNumberWithZero}.{DayOfMonthWithZero}.{Year}{/block:IfAmericanDates}{block:IfNotAmericanDates}{DayOfMonthWithZero}.{MonthNumberWithZero}.{Year}{/block:IfNotAmericanDates}{/block:Date}{block:NoteCount} // {NoteCountWithLabel}{/block:NoteCount}</a>
+                                </div>
+                        {/block:Audio}
+                       
+                        {block:Video}
+                                {block:IfBiggerPosts}{Video-500}{/block:IfBiggerPosts}{block:IfNotBiggerPosts}{Video-400}{/block:IfNotBiggerPosts}
+                                {block:IfShowCaptions}{block:Caption}{Caption}{/block:Caption}{/block:IfShowCaptions}
+                                <div class="stats">
+                                    {block:Date}<a href="{Permalink}">&uarr; {24HourWithZero}:{Minutes} // {block:IfAmericanDates}{MonthNumberWithZero}.{DayOfMonthWithZero}.{Year}{/block:IfAmericanDates}{block:IfNotAmericanDates}{DayOfMonthWithZero}.{MonthNumberWithZero}.{Year}{/block:IfNotAmericanDates}{/block:Date}{block:NoteCount} // {NoteCountWithLabel}{/block:NoteCount}</a>
+                                </div>
+                        {/block:Video}
+                       
+                        {block:Answer}
+                                <div class="qborder">
+                                    {Question}
+                                    <div class="qpic">
+                                        <img src="{AskerPortraitURL-30}" />
+                                        <div class="qname">{Asker}</div>
+                                           
+                                    </div>
+                                </div>
+                                {Answer}
+                                <div class="stats">
+                                    {block:Date}<a href="{Permalink}">&uarr; {24HourWithZero}:{Minutes} // {block:IfAmericanDates}{MonthNumberWithZero}.{DayOfMonthWithZero}.{Year}{/block:IfAmericanDates}{block:IfNotAmericanDates}{DayOfMonthWithZero}.{MonthNumberWithZero}.{Year}{/block:IfNotAmericanDates}{/block:Date}{block:NoteCount} // {NoteCountWithLabel}{/block:NoteCount}</a>
+                                </div>
+                        {/block:Answer}
+                       
+                        </div>
+                       
+                        {block:PermalinkPage}
+                                {block:RebloggedFrom}<div class="permastats">origin: <a href="{ReblogRootURL}">{ReblogRootName}</a> <br /> via: <a href="{ReblogParentURL}">{ReblogParentName}</a></div>{/block:RebloggedFrom}
+                                {block:HasTags}<div class="permastats2">{block:Tags}tags: <a href="{TagURL}">#{Tag}</a>{/block:Tags}</div>{/block:HasTags}
+                                </div>
+                                    {block:PostNotes}<div class="notes">{PostNotes} </div>{/block:PostNotes}
+                        {/block:PermalinkPage}
+                       
+                    {/block:Posts}
+                   
+                    </div>
+                </div>
+                </div>
+            </div>
+    </body>
+</html>
